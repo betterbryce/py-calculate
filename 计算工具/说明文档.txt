@@ -1,0 +1,24 @@
+计算合计表说明文档
+
+1、文件命名统一
+
+例如 Order-SKU-all20240702032636442.xlsx  （ 去掉日期时间部分只保留文件名 Order-SKU-all.xlsx ）
+
+2、文件格式统一为 .xlsx
+
+3、需要计算的文件统一放在一个文件夹内（5个文件），缺少文件程序执行会出错
+  Order-SKU-all
+  shopee_edit_price_stock
+  Shopee-Ads-Overall-Data
+  商品信息
+  销售毛利统计-按商品统计
+
+4、步骤 ：点击 计算合计表工具.exe -> 点击开始计算按键 -> 输入汇率 -> 选择需要操作的文件夹路径 -> 自动获取文件夹内xlsx文件开始计算 （等待计算结束即可）
+
+注意项：
+	1、确保电脑已经安装excel软件 （非wps）
+	2、商品信息表中的分类列请不要为空，不然根据sku匹配出来的没有分类将合计到空白项
+	3、等待计算完成后才能继续选择下一家店铺进行计算
+
+打包命令：python -m nuitka --standalone  --enable-plugin=pyside6  --remove-output --onefile mainwindow.py --windows-icon-from-ico=icon.ico
+
